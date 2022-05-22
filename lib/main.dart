@@ -35,7 +35,7 @@ class _DoctorListState extends State<DoctorList> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: AppBar(
         backgroundColor: Colors.greenAccent[400],
-        title: Text('Doctor '),
+        title: Text('Doctor List'),
         centerTitle: true,
         actions: [
           IconButton(
