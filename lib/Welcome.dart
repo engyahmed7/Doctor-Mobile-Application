@@ -8,7 +8,7 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+     backgroundColor: Colors.green,
       body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,13 +29,20 @@ class Welcome extends StatelessWidget {
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 SizedBox(
+
                   width: 300,
                   child: TextField(
+
                     decoration: InputDecoration(
+                      hoverColor:Colors.black ,
+                        fillColor: Colors.black,
+                        iconColor: Colors.black,
+                        focusColor: Colors.black,
                         prefixIcon: Icon(Icons.email_outlined),
                         // hintText: 'Email Address',
                         labelText: 'Email Address',
-                        focusColor: Colors.black,
+                        hintText: 'Email Address',
+
                         border: OutlineInputBorder()),
                     keyboardType: TextInputType.name,
                     textInputAction: TextInputAction.done,
@@ -47,8 +54,9 @@ class Welcome extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         prefixIcon: Icon(Icons.lock),
-                        // hintText: 'Password',
+                         hintText: 'Password',
                         labelText: 'Password',
+                        hoverColor: Colors.blue,
                         focusColor: Colors.black,
                         border: OutlineInputBorder()),
                     keyboardType: TextInputType.name,

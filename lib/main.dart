@@ -1,6 +1,4 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_web_libraries_in_flutter, unused_import, must_be_immutable, use_key_in_widget_constructors, deprecated_member_use
-
-import 'dart:html';
 import 'package:doctor_project/Notification.dart';
 import 'package:doctor_project/Welcome.dart';
 import 'package:doctor_project/login.dart';
@@ -41,7 +39,7 @@ class _DoctorListState extends State<DoctorList> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.workspaces_filled),
+            icon: Icon(Icons.abc_sharp),
             onPressed: () {},
             color: Colors.white,
           )
@@ -177,24 +175,33 @@ class DoctorDetails extends StatelessWidget {
         title: Text('Doctor Details'),
         centerTitle: true,
         backgroundColor: Colors.greenAccent[400],
+        actions: [
+          IconButton(
+            icon: Icon(Icons.abc_sharp),
+            onPressed: () {},
+            color: Colors.white,
+          )
+        ],
       ),
       bottomNavigationBar: bottomNavBar(),
       body: ListView(
         children: [
           Container(
+            width: MediaQuery.of(context).size.width,
             padding: EdgeInsets.all(15),
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
+
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
                       padding: EdgeInsets.all(20),
                       child: CircleAvatar(
                         backgroundImage: AssetImage(doctor.urlPhoto),
-                        radius: 90,
+                        radius: 65,
                       ),
                     ),
                     Column(
@@ -286,7 +293,7 @@ class DoctorDetails extends StatelessWidget {
                     child: RaisedButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Notify(),
+                          builder: (context) => Notify(doctor),
                         ));
                       },
                       shape: RoundedRectangleBorder(

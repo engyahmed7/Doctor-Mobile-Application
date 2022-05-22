@@ -24,7 +24,7 @@ class Notify extends StatelessWidget {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.workspaces_filled),
+            icon: Icon(Icons.abc_sharp),
             onPressed: () {},
             color: Colors.white,
           )
@@ -41,7 +41,7 @@ class Notify extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Icon(
                   Icons.check_circle_outline_outlined,
-                  size: 250,
+                  size: 200,
                   color: Colors.green,
                 ),
               ),
@@ -57,7 +57,7 @@ class Notify extends StatelessWidget {
                 padding: EdgeInsets.only(bottom: 30),
                 alignment: Alignment.center,
                 child: Text(
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+                  "Lorem Ipsum is simply dummy text of the printing. ",
                   // textAlign: TextAlign.center,
                 ),
               ),
