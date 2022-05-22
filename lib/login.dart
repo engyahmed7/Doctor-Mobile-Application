@@ -3,6 +3,7 @@
 import 'dart:html';
 
 import 'package:doctor_project/Notification.dart';
+import 'package:doctor_project/Welcome.dart';
 import 'package:doctor_project/main.dart';
 import 'package:doctor_project/model/doctor.dart';
 import 'package:flutter/cupertino.dart';
@@ -65,7 +66,25 @@ class _LoginState extends State<Login> {
             title: Text("Notification"),
             leading: Icon(Icons.notification_add),
             onTap: () {},
-          )
+          ),
+          ListTile(
+            title: Text("Help"),
+            leading: Icon(Icons.help_center_outlined),
+            onTap: () {},
+          ),
+          ListTile(
+            title: Text("About"),
+            leading: Icon(Icons.event_available_outlined),
+            onTap: () {},
+          ),
+          ListTile(
+            title: Text("Logout"),
+            leading: Icon(Icons.output),
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Welcome()));
+            },
+          ),
         ]),
       ),
       body: Container(
