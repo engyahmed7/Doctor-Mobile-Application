@@ -69,7 +69,7 @@ List<Doctor> doctors = [
       "images/3.jpg"),
   Doctor(
       '7',
-      'Veronica Cieszynski',
+      'Veronica Ciesz',
       'Rheumatologists',
       " 4.0",
       'St.Bronxlyn',

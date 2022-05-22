@@ -35,7 +35,7 @@ class _DoctorListState extends State<DoctorList> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: AppBar(
         backgroundColor: Colors.greenAccent[400],
-        title: Text('Doctor List'),
+        title: Text('Doctor '),
         centerTitle: true,
         actions: [
           IconButton(
@@ -95,7 +95,7 @@ class _DoctorListState extends State<DoctorList> {
                       color: Colors.amber,
                     ),
                     Text(
-                      '4.9',
+                      doctor.rating,
                       style: TextStyle(fontSize: 18, color: Colors.black),
                     )
                   ],
@@ -194,7 +194,6 @@ class DoctorDetails extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
