@@ -1,4 +1,4 @@
-# doctor_project
+# Doctor Mobile Application
 
 A new Flutter project.
 
