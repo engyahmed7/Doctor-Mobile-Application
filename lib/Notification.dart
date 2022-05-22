@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'model/doctor.dart';
 import 'my_flutter_app_icons.dart';
 
@@ -11,11 +12,18 @@ class Notify extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        enableFeedback: true,
-        backgroundColor: Colors.greenAccent[400],
-        child: Icon(Icons.add),
-        onPressed: () {},
+      floatingActionButton: SpeedDial(
+        animatedIcon: AnimatedIcons.add_event,
+        children: [
+          SpeedDialChild(child: Icon(Icons.copy), label: 'copy'),
+          SpeedDialChild(child: Icon(Icons.email), label: 'email'),
+          SpeedDialChild(child: Icon(Icons.share), label: 'share'),
+        ],
+        backgroundColor: Color.fromARGB(255, 70, 217, 77),
+        overlayColor: Colors.grey,
+        spaceBetweenChildren: 15,
+        spacing: 10,
+        closeManually: false,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: AppBar(
