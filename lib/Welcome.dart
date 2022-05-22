@@ -33,7 +33,8 @@ class Welcome extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         prefixIcon: Icon(Icons.email_outlined),
-                        hintText: 'Email Address',
+                        // hintText: 'Email Address',
+                        labelText: 'Email Address',
                         focusColor: Colors.black,
                         border: OutlineInputBorder()),
                     keyboardType: TextInputType.name,
@@ -46,7 +47,8 @@ class Welcome extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         prefixIcon: Icon(Icons.lock),
-                        hintText: 'Password',
+                        // hintText: 'Password',
+                        labelText: 'Password',
                         focusColor: Colors.black,
                         border: OutlineInputBorder()),
                     keyboardType: TextInputType.name,

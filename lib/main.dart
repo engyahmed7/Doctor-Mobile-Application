@@ -286,7 +286,7 @@ class DoctorDetails extends StatelessWidget {
                     child: RaisedButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Notify(doctor),
+                          builder: (context) => Notify(),
                         ));
                       },
                       shape: RoundedRectangleBorder(

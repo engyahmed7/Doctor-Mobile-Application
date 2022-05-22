@@ -77,7 +77,7 @@ class Notify extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 30, bottom: 20),
                 child: Text(
-                  "Name",
+                  "Doctor Name",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
@@ -97,7 +97,7 @@ class Notify extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 30, bottom: 20),
                 child: Text(
-                  "Desease",
+                  "Doctor Address",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
@@ -117,7 +117,7 @@ class Notify extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 30, bottom: 20),
                 child: Text(
-                  "Email",
+                  "Doctor Rate",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
