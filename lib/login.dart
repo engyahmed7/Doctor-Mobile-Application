@@ -1,18 +1,73 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'dart:html';
 
+import 'package:doctor_project/Notification.dart';
 import 'package:doctor_project/main.dart';
+import 'package:doctor_project/model/doctor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  Login({Key? key}) : super(key: key);
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  TextEditingController name = new TextEditingController();
+
+  TextEditingController email = new TextEditingController();
+
+  TextEditingController desease = new TextEditingController();
+
+  TextEditingController description = new TextEditingController();
+
+  String text = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      floatingActionButton: FloatingActionButton(
+        enableFeedback: true,
+        backgroundColor: Colors.greenAccent[400],
+        child: Icon(Icons.add),
+        onPressed: () {},
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      appBar: AppBar(
+        backgroundColor: Colors.greenAccent[400],
+        title: Text('Login'),
+        centerTitle: true,
+      ),
       bottomNavigationBar: bottomNavBar(),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Column(children: [
+          UserAccountsDrawerHeader(
+              currentAccountPicture:
+                  CircleAvatar(backgroundColor: Colors.white),
+              accountName: Text("Engy"),
+              accountEmail: Text("engya306@gmail.com")),
+          ListTile(
+            title: Text("Home Page"),
+            leading: Icon(Icons.home),
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => DoctorList()));
+            },
+          ),
+          ListTile(
+            title: Text("Profile"),
+            leading: Icon(Icons.person),
+            onTap: () {},
+          ),
+          ListTile(
+            title: Text("Notification"),
+            leading: Icon(Icons.notification_add),
+            onTap: () {},
+          )
+        ]),
+      ),
       body: Container(
         margin: EdgeInsets.all(10),
         child: Column(
@@ -38,6 +93,7 @@ class Login extends StatelessWidget {
             SizedBox(
               width: 300,
               child: TextField(
+                controller: name,
                 decoration: InputDecoration(
                     labelText: 'name',
                     hintText: 'Your name',
@@ -55,6 +111,7 @@ class Login extends StatelessWidget {
             SizedBox(
               width: 300,
               child: TextField(
+                controller: email,
                 decoration: InputDecoration(
                     labelText: 'email',
                     border: OutlineInputBorder(),
@@ -72,6 +129,7 @@ class Login extends StatelessWidget {
             SizedBox(
               width: 300,
               child: TextField(
+                controller: desease,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'What is your illness'),
@@ -88,6 +146,7 @@ class Login extends StatelessWidget {
             SizedBox(
               width: 300,
               child: TextFormField(
+                controller: description,
                 minLines: 3,
                 maxLines: 5,
                 decoration: InputDecoration(

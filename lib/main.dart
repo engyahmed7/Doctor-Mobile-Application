@@ -1,13 +1,15 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_web_libraries_in_flutter, unused_import, must_be_immutable, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_web_libraries_in_flutter, unused_import, must_be_immutable, use_key_in_widget_constructors, deprecated_member_use
 
 import 'dart:html';
+import 'package:doctor_project/Notification.dart';
+import 'package:doctor_project/Welcome.dart';
 import 'package:doctor_project/login.dart';
 import 'package:flutter/material.dart';
 import 'model/doctor.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Login(),
+    home: Welcome(),
     theme: ThemeData(
       primarySwatch: Colors.green,
     ),
@@ -37,13 +39,6 @@ class _DoctorListState extends State<DoctorList> {
         backgroundColor: Colors.greenAccent[400],
         title: Text('Doctor List'),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
-        ),
         actions: [
           IconButton(
             icon: Icon(Icons.workspaces_filled),
@@ -166,7 +161,6 @@ class _DoctorListState extends State<DoctorList> {
 
 class DoctorDetails extends StatelessWidget {
   Doctor doctor;
-
   DoctorDetails(this.doctor);
 
   @override
@@ -290,7 +284,11 @@ class DoctorDetails extends StatelessWidget {
                   child: SizedBox(
                     width: 400,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Notify(doctor),
+                        ));
+                      },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40)),
                       padding: EdgeInsets.all(20),
@@ -346,6 +344,7 @@ class DoctorDetails extends StatelessWidget {
     );
   }
 }
+
 
 // class DoctorList extends StatefulWidget {
 //   DoctorList({Key? key}) : super(key: key);
