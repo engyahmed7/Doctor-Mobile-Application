@@ -68,7 +68,7 @@ class Welcome extends StatelessWidget {
               ],
             ),
             SizedBox(
-              width: 400,
+              width: 300,
               child: RaisedButton(
                 onPressed: () {
                   Navigator.of(context)
@@ -88,7 +88,7 @@ class Welcome extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: 400,
+              width: 300,
               child: RaisedButton(
                 onPressed: () {},
                 shape: RoundedRectangleBorder(

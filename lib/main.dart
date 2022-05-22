@@ -76,7 +76,7 @@ class _DoctorListState extends State<DoctorList> {
               padding: const EdgeInsets.all(8),
               child: CircleAvatar(
                 backgroundImage: AssetImage(doctor.urlPhoto),
-                radius: 65,
+                radius: 50,
               ),
             ),
             Column(
@@ -88,7 +88,7 @@ class _DoctorListState extends State<DoctorList> {
                     Text(
                       doctor.name,
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 20,
                       ),
                     ),
                     Icon(
@@ -136,7 +136,14 @@ class _DoctorListState extends State<DoctorList> {
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => DoctorList(),
+              ));
+            },
+          ),
           label: 'Home',
         ),
         BottomNavigationBarItem(
@@ -201,7 +208,7 @@ class DoctorDetails extends StatelessWidget {
                       padding: EdgeInsets.all(20),
                       child: CircleAvatar(
                         backgroundImage: AssetImage(doctor.urlPhoto),
-                        radius: 65,
+                        radius: 50,
                       ),
                     ),
                     Column(

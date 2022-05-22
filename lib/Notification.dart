@@ -41,7 +41,7 @@ class Notify extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Icon(
                   Icons.check_circle_outline_outlined,
-                  size: 200,
+                  size: 150,
                   color: Colors.green,
                 ),
               ),
@@ -49,7 +49,7 @@ class Notify extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Text(
                   "Your Request Has Been Approved",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ),
               Padding(padding: EdgeInsets.only(bottom: 10)),
