@@ -62,7 +62,6 @@ class _DoctorListState extends State<DoctorList> {
           child: Container(
             width: size.width,
             height: size.height / 5,
-            // color: Colors.blue,
             child: doctorCard(e),
           ),
         );
@@ -83,7 +82,7 @@ class _DoctorListState extends State<DoctorList> {
             Padding(
               padding: const EdgeInsets.all(8),
               child: CircleAvatar(
-                backgroundImage: AssetImage(doctor.urlPhoto),
+                backgroundImage: AssetImage(doctor.images),
                 radius: 50,
               ),
             ),
@@ -92,6 +91,7 @@ class _DoctorListState extends State<DoctorList> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       doctor.name,
@@ -99,6 +99,7 @@ class _DoctorListState extends State<DoctorList> {
                         fontSize: 20,
                       ),
                     ),
+                    Padding(padding: EdgeInsets.only(left: 10)),
                     Icon(
                       Icons.star,
                       color: Colors.amber,
@@ -222,7 +223,7 @@ class DoctorDetails extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(20),
                       child: CircleAvatar(
-                        backgroundImage: AssetImage(doctor.urlPhoto),
+                        backgroundImage: AssetImage(doctor.images),
                         radius: 50,
                       ),
                     ),

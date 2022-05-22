@@ -5,11 +5,11 @@ class Doctor {
   String address;
   String rating;
   String shortDescription;
-  String urlPhoto;
+  String images;
   String Location;
 
   Doctor(this.id, this.name, this.speciality, this.rating, this.address,
-      this.shortDescription, this.urlPhoto, this.Location);
+      this.shortDescription, this.images, this.Location);
 }
 
 List<Doctor> doctors = [
@@ -21,7 +21,7 @@ List<Doctor> doctors = [
       'St.Bronxlyn',
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       'images/1.jpg',
-      "loc1.webp"),
+      ""),
   Doctor(
       '2',
       'Alison Baillargeon',
