@@ -2,6 +2,7 @@
 import 'package:doctor_project/Notification.dart';
 import 'package:doctor_project/Welcome.dart';
 import 'package:doctor_project/login.dart';
+import 'package:doctor_project/my_flutter_app_icons.dart';
 import 'package:flutter/material.dart';
 import 'model/doctor.dart';
 
@@ -39,7 +40,7 @@ class _DoctorListState extends State<DoctorList> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.abc_sharp),
+            icon: Icon(MyFlutterApp.dot_3),
             onPressed: () {},
             color: Colors.white,
           )
@@ -177,7 +178,7 @@ class DoctorDetails extends StatelessWidget {
         backgroundColor: Colors.greenAccent[400],
         actions: [
           IconButton(
-            icon: Icon(Icons.abc_sharp),
+            icon: Icon(MyFlutterApp.dot_3),
             onPressed: () {},
             color: Colors.white,
           )

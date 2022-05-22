@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'model/doctor.dart';
+import 'my_flutter_app_icons.dart';
 
 class Notify extends StatelessWidget {
   //String name, email, desease, description;
@@ -23,7 +24,7 @@ class Notify extends StatelessWidget {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.abc_sharp),
+            icon: Icon(MyFlutterApp.dot_3),
             onPressed: () {},
             color: Colors.white,
           )

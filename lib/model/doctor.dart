@@ -43,7 +43,7 @@ List<Doctor> doctors = [
   Doctor(
       '4',
       'Christopher Bloss',
-      'Obstetrician/gynecologists',
+      'Obstetrician',
       "5",
       'St.Bronxlyn',
       "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",

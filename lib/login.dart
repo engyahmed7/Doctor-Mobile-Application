@@ -4,6 +4,8 @@ import 'package:doctor_project/Welcome.dart';
 import 'package:doctor_project/main.dart';
 import 'package:flutter/material.dart';
 
+import 'my_flutter_app_icons.dart';
+
 class Login extends StatefulWidget {
   Login({Key? key}) : super(key: key);
 
@@ -37,7 +39,7 @@ class _LoginState extends State<Login> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.abc_sharp),
+            icon: Icon(MyFlutterApp.dot_3),
             onPressed: () {},
             color: Colors.white,
           ),
