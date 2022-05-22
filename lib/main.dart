@@ -279,7 +279,7 @@ class DoctorDetails extends StatelessWidget {
                 Container(
                   alignment: Alignment.center,
                   child: Image.asset(
-                    "images/loc1.webp",
+                    "images/map.jpg",
                     width: 250,
                     height: 250,
                   ),
