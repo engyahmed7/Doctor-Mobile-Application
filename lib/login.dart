@@ -1,10 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
-import 'package:doctor_project/Notification.dart';
 import 'package:doctor_project/Welcome.dart';
 import 'package:doctor_project/main.dart';
-import 'package:doctor_project/model/doctor.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -43,7 +40,7 @@ class _LoginState extends State<Login> {
             icon: Icon(Icons.abc_sharp),
             onPressed: () {},
             color: Colors.white,
-          )
+          ),
         ],
       ),
       bottomNavigationBar: bottomNavBar(),
